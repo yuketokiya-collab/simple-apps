@@ -36,7 +36,7 @@ pipeline {
                 sh '''
                 docker tag simple-apps-apps asusant1984/simple-apps-apps
                 docker push asusant1984/simple-apps-apps
-                docker prune -a -f
+                docker prune -f
                 '''
             }
         }
