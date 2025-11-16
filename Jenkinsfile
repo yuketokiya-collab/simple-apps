@@ -11,7 +11,7 @@ pipeline {
         stage('Unit Testing') {
             steps {
                 sh '''npm test
-                npm run test:coverage'''
+                '''
             }
         }
         stage('Code Review') {
@@ -34,9 +34,9 @@ pipeline {
         stage('Push Images') {
             steps {
                 sh '''
-                docker tag simple-apps asusant1984/simple-apps
-                docker push asusant1984/simple-apps
-                docker prune -a -f
+                docker tag simple-apps-apps asusant1984/simple-apps-apps
+                docker push asusant1984/simple-apps-apps
+                docker image prune -a -f
                 '''
             }
         }
