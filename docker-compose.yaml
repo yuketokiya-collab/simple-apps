@@ -2,6 +2,6 @@ services:
   apps:
     build: .
     ports:
-      - "10000:4000"
+      - "10000:4001"
     restart: always
     env_file: .env
